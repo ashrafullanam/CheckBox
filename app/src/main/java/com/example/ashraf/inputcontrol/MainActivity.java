@@ -51,16 +51,18 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             selectItem = ((CheckBox)view).getText().toString();
-            for (String object: arrayList) {
+           /* for (String object: arrayList) {
                 if(object==selectItem){
                     arrayList.remove(selectItem);
                 }
             }
-            /*String str = "";
+            String str = "";
             for (String pair : arrayList) {
                 str += pair + ' ';
             }
             Toast.makeText(this, str, Toast.LENGTH_LONG).show();*/
+            if(arrayList.contains(selectItem))
+                arrayList.remove(selectItem);
             Toast.makeText(this, "Size"+arrayList.size(), Toast.LENGTH_LONG).show();
         }
     }
